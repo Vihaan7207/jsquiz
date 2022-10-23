@@ -6,7 +6,6 @@ import gradient from 'gradient-string';
 import chalkAnimation from 'chalk-animation';
 import figlet from 'figlet';
 import { createSpinner } from 'nanospinner';
-import { PARTICLEORIENTATION_EMITTER } from 'playcanvas';
 
 let playerName; 
 
@@ -41,20 +40,7 @@ async function askName(){
     playerName = answers.player_name;
 }
 
-async function question(){
-    const answers = await inquirer.prompt({
-        name: "question",
-        type: 'list',
-        message: 'question\n',
-        choices: [
-            'choice1',
-            'choice',
-            'choice',
-            'choice'
-        ]
-    });
-    return handleAnswer(answers.question == 'choice1');
-}
+
 
 async function question1(){
     const answers = await inquirer.prompt({
